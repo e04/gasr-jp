@@ -117,7 +117,7 @@ class SodaClient {
     const pbf = new Pbf(response);
     const res = SodaResponse.read(pbf);
     if (res.soda_type !== 6) {
-      console.log("=== got response", new Date(), res)
+      // console.log("=== got response", new Date(), res)
     }
     if (res.soda_type === SodaResponse.SodaMessageType.RECOGNITION.value) {
       const hypothesis = res.recognition_result.hypothesis[0];
@@ -130,7 +130,7 @@ class SodaClient {
         res.recognition_result.result_type ===
         SodaRecognitionResult.ResultType.PARTIAL.value
       ) {
-        process.stdout.write(`* ${hypothesis}\r`);
+        // process.stdout.write(`* ${hypothesis}\r`);
       }
     }
   }
