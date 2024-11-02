@@ -130,7 +130,7 @@ class SodaClient {
         res.recognition_result.result_type ===
         SodaRecognitionResult.ResultType.PARTIAL.value
       ) {
-        // process.stdout.write(`* ${hypothesis}\r`);
+        process.stdout.write(`${hypothesis}\r`);
       }
     }
   }
